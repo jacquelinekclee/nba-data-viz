@@ -119,8 +119,8 @@ var plot1=function(filePath){
                 var string = string + "<br>Position: " + pos;
                 var string = string + "<br>Total 3PA: " + d['3PA'];
                 var prev = d.Year - 1;
-                console.log(prev)
                 var string = string + "<br>Season: " + prev + "-" + d.Year;
+		console.log(d3.pointer(e)[0])
                 tooltip
                   .html(string)
                   .style("left", (d3.pointer(e)[0] - 800) + "px")
