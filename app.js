@@ -123,7 +123,7 @@ var plot1=function(filePath){
                 var string = string + "<br>Season: " + prev + "-" + d.Year;
                 tooltip
                   .html(string)
-                  .style("left", (d3.pointer(e)[0] + 200) + "px")
+                  .style("left", (d3.pointer(e)[0] - 200) + "px")
                   .style("top", (d3.pointer(e)[1] + 180) + "px")
               }
         var mouseleave = function(e,d) {
