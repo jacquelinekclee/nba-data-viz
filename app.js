@@ -123,7 +123,7 @@ var plot1=function(filePath){
                 var string = string + "<br>Season: " + prev + "-" + d.Year;
                 tooltip
                   .html(string)
-                  .style("left", (width/2 + d3.pointer(e)[0] + 600) + "px")
+                  .style("left", (d3.pointer(e)[0] + 200) + "px")
                   .style("top", (d3.pointer(e)[1] + 180) + "px")
               }
         var mouseleave = function(e,d) {
@@ -645,7 +645,7 @@ var plot4=function(filePath) {
             .range([0, 1]);
         var logCountsArr = [];
         states.forEach((s) => logCountsArr.push(logScale(statesCount[s])));
-        const projection1 = d3.geoAlbersUsa().translate([width/2,height/2]).scale(900,900); //chain translate and scale
+        const projection1 = d3.geoAlbersUsa().scale(900,900); //chain translate and scale
         const pathgeo1 = d3.geoPath().projection(projection1); 
         const statesmap = d3.json('us-states.json');
         statesmap.then(function (map) {
